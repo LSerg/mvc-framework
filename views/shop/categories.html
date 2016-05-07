@@ -1,0 +1,25 @@
+<a href="/<?=App::getRouter()->getLanguage()?>/shop/"><?=Lang::get('lng.shop')?></a> / <?=$data['category']['name']?>
+    <h3><?=$data['category']['name']?></h3>
+<?php if(isset($data['categories'])) { ?>
+<div class="pics">
+    <?php foreach($data['categories'] as $page_data) { ?>
+    <div style="width:196px; float: left;">
+        <a href="/<?=App::getRouter()->getLanguage()?>/<?=App::getRouter()->getController()?>/categories/<?=$page_data['id']?>">
+            <img src="/images/<?=$page_data['image']?>" alt="<?=$page_data['image']?>"><?=$page_data['name']?></a><br/>
+        <?=$page_data['description']?><br/>
+    </div>
+    <?php } ?>
+    <div style="clear: both"></div>
+</div>
+<?php } ?>
+<div style="clear:both"></div>
+<div class="pics">
+    <?php foreach($data['products'] as $page_data) { ?>
+    <div style="width:196px; float: left">
+        <a href="/<?=App::getRouter()->getLanguage()?>/<?=App::getRouter()->getController()?>/products/<?=$page_data['alias']?>"><img src="/images/<?=$page_data['image']?>" alt="<?=$page_data['image']?>"><?=$page_data['name']?></a>
+        <br/>$<?=$page_data['price']?>
+    </div>
+    <?php } ?>
+    <div style="clear: both"></div>
+</div>
+<pre><?=var_dump($data)?></pre>

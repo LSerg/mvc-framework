@@ -1,0 +1,20 @@
+<h3><?=Lang::get('lng.shop')?></h3>
+<?php foreach($data['categories'] as $category) { ?>
+<div style="float:left; width: 185px; border-right:1px solid #ccc; margin:5px; min-height: 210px">
+    <a href="/<?=App::getRouter()->getLanguage()?>/<?=App::getRouter()->getController()?>/categories/<?=$category['id']?>"><img src="/images/<?=$category['image']?>" style="width: 100%"><br/>
+    <?=$category['name']?></a>
+</div>
+<?php } ?>
+
+<div style="clear:both"><br/></div>
+<h3>Лучшие товары:</h3>
+<div class="pics">
+    <?php foreach($data['products'] as $page_data) { ?>
+    <div style="width:196px; float: left;">
+        <a href="/<?=App::getRouter()->getLanguage()?>/<?=App::getRouter()->getController()?>/products/<?=$page_data['alias']?>"><img src="/images/<?=$page_data['image']?>" alt="<?=$page_data['image']?>">
+            <br/><?=$page_data['name']?></a>
+        $<?=$page_data['price']?>
+    </div>
+    <?php } ?>
+    <div style="clear: both"></div>
+</div>

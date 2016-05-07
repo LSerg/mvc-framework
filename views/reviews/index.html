@@ -1,0 +1,7 @@
+<h3 style="float:left"><?=Lang::get('lng.reviews')?></h3>
+<a href="/<?=App::getRouter()->getLanguage()?>/<?=App::getRouter()->getController()?>/add/" style="float:right"><?=Lang::get('lng.reviews.add')?></a><br/><br>
+<?php foreach($data['pages'] as $page_data) { ?>
+<strong><?=$page_data['name']?></strong> <?=$page_data['date']?><br/>
+&nbsp;<?=$page_data['text']?><br/><br/>
+
+<?php } ?>

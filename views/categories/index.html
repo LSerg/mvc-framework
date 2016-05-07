@@ -1,0 +1,5 @@
+<?=Lang::get('lng.shop')?> /
+<h3>Categories</h3>
+<?php foreach($data['pages'] as $page_data) { ?>
+    <a href="/<?=App::getRouter()->getLanguage()?>/<?=App::getRouter()->getController()?>/view/<?=$page_data['id']?>"<?=$page_data['name']?></a><br/>
+<?php } ?>

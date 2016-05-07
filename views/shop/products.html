@@ -1,0 +1,12 @@
+<a href="/<?=App::getRouter()->getLanguage()?>/shop/"><?=Lang::get('lng.shop')?></a> / <a href="/<?=App::getRouter()->getLanguage()?>/<?=App::getRouter()->getController()?>/categories/<?=$data['category']['id']?>"><?=$data['category']['name']?></a> / <?=$data['name']?>
+<h3><?=$data['name']?></h3>
+<div class="pics">
+    <div style="width:196px; float: left">
+        <a href="/images/<?=$data['image']?>" target="_blank"><img src="/images/<?=$data['image']?>" alt="<?=$data['image']?>"></a>
+        <br/>
+    </div>
+    <div style="width:296px; float: left"><?=$data['description']?></div>
+    <div style="width:296px; float: right">$<?=$data['price']?></div>
+    <div style="clear: both"></div>
+</div>
+<?=var_dump($data)?>

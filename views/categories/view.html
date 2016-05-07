@@ -1,0 +1,13 @@
+<a href="/<?=App::getRouter()->getLanguage()?>/shop/"><?=Lang::get('lng.shop')?></a> / <?=$data['category']['name']?>
+<h3><?=$data['category']['name']?></h3>
+<div class="pics">
+    <?php foreach($data['product'] as $page_data) { ?>
+    <div style="width:196px; float: left">
+        <a href="/<?=App::getRouter()->getLanguage()?>/products/view/<?=$page_data['alias']?>">
+        <img src="/images/<?=$page_data['image']?>" alt="<?=$page_data['image']?>"></a><strong><?=$page_data['name']?></strong><br/>
+        <?=$page_data['description']?><br/>
+        $<?=$page_data['price']?>
+    </div>
+    <?php } ?>
+    <div style="clear: both"></div>
+</div>

@@ -1,0 +1,6 @@
+<div style="width:600px; float: left">
+    <a href="/<?=App::getRouter()->getLanguage()?>/shop/"><?=Lang::get('lng.shop')?></a> / <?=$data['category']['name']?><h3><?=$data['name']?></h3>
+    <a href="/images/<?=$data['image']?>" target="_blank"><img src="/images/<?=$data['image']?>" alt="<?=$data['image']?>" style="width:600px;"></a>
+    <?=$data['description']?><br/>
+    $<?=$data['price']?>
+</div>

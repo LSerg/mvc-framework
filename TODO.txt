@@ -1,0 +1,14 @@
+1. GreatDay Tasks:
+	MySQL:  
+		dbname: greatday
+
+		dbtablename: users
+		db rows: id(int), name(varchar), email(varchar), pass(md5)
+
+
+		dbtablename: tasks
+		db rows: id(int), name(VARCHAR), comment(varchar),
+			 is_active(bool), done(bool), date(timestamp)
+		
+		dbtablename: userstasks
+		db rows: id(int), user_id(int), task_id(int)

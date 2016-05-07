@@ -1,0 +1,62 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 600px;
+    font-family: "Segoe UI";
+    font-size: 1em;
+}
+a {
+    font-weight: 500;
+}
+a, a:visited{
+    color: #000000;}
+a:hover{
+    text-decoration: none;
+}
+.nav, .lang {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+.nav>li, .lang>li{
+    float: left;
+    position: relative;
+    display: block;
+}
+.nav>li>a, .lang>li>a {
+    padding: 5px 4px;
+}
+.active>a {
+    text-decoration: none;
+    cursor: default;
+    color: #000;
+    font-weight: normal;
+
+}
+.header {
+    padding-bottom: 20px;
+}
+.content, .header, .footer {
+    margin: 5px;
+}
+h3 {
+    margin: auto;
+}
+hr {
+    margin: auto;
+}
+input, textarea, button {
+    margin: 5px 0 0 0;
+    font-family: "Segoe UI";
+    width: 50%;
+    font-size: 1em;
+}
+button {
+    cursor: pointer;
+}
+.pics img {
+    max-width: 193px;
+}
+.onepic img {
+    max-width: 590px;
+}

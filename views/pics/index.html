@@ -1,0 +1,6 @@
+<h3><?=Lang::get('lng.pics')?></h3>
+<div class="pics">
+<?php foreach($data['pages'] as $page_data) { ?>
+    <a href="/<?=App::getRouter()->getLanguage()?>/<?=App::getRouter()->getController()?>/view/<?=$page_data['id']?>"><img src="/images/<?=$page_data['image']?>" alt="<?=$page_data['image']?>"></a>
+<?php } ?>
+</div>

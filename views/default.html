@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title><?=Config::get('site_name')?></title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div style="float: left">
+        <ul class="nav">
+            <li<?php if( App::getRouter()->getController() == 'main' ) {?> class="active"<?php } ?>><a href="/<?=App::getRouter()->getLanguage()?>/"><?=Lang::get('lng.home')?></a></li>
+            <li<?php if( App::getRouter()->getController() == 'shop' || App::getRouter()->getController() == 'products' || App::getRouter()->getController() == 'categories') {?> class="active"<?php } ?>><a href="/<?=App::getRouter()->getLanguage()?>/shop/"><?=Lang::get('lng.shop')?></a></li>
+            <li<?php if( App::getRouter()->getController() == 'pages' ) {?> class="active"<?php } ?>><a href="/<?=App::getRouter()->getLanguage()?>/pages/"><?=Lang::get('lng.pages')?></a></li>
+            <li<?php if( App::getRouter()->getController() == 'pics' ) {?> class="active"<?php } ?>><a href="/<?=App::getRouter()->getLanguage()?>/pics/"><?=Lang::get('lng.pics')?></a></li>
+            <li<?php if( App::getRouter()->getController() == 'reviews' ) {?> class="active"<?php } ?>><a href="/<?=App::getRouter()->getLanguage()?>/reviews/"><?=Lang::get('lng.reviews')?></a></li>
+            <li<?php if( App::getRouter()->getController() == 'contacts' ) {?> class="active"<?php } ?>><a href="/<?=App::getRouter()->getLanguage()?>/contacts/"><?=Lang::get('lng.contacts')?></a></li>
+        </ul>
+    </div>
+    <div style="float:right">
+        <ul class="lang">
+            <li<?php if( App::getRouter()->getLanguage() == 'ru' ) {?> class="active"<?php } ?>><a href="/">ru</a></li>
+            <li<?php if( App::getRouter()->getLanguage() == 'en' ) {?> class="active"<?php } ?>><a href="/en/">en</a></li>
+        </ul>
+    </div>
+</div>
+<div style="clear:both"></div>
+<hr>
+<div class="content">
+    <?=$data['content']?>
+</div>
+<hr>
+<div class="footer">
+    <?=Config::get('site_name')?> 2016 Footer
+</div>
+</body>
+</html>
